@@ -14,6 +14,7 @@ set number 		"Let's activate line numbers.
 
 set linespace=10
 
+set tabstop=4							"Redefine tab as 4 spaces
 
 
 
@@ -72,6 +73,9 @@ nmap <C-E> :CtrlPMRUFiles<cr>
 
 
 nmap <Leader>f :tag<space>
+nmap tn :tn<space>
+nmap tp :tp<space>
+nmap ts :ts<space>
 
 
 
@@ -85,16 +89,36 @@ nmap <Leader>f :tag<space>
 "/ CtrlP
 "/
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-let g:ctrlp_custom_ignore = 'node_modules\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max30,results:30'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules\|\v[\/]\.(git|hg|svn)$', }
+" \ 'file': '\v\.(exe|so|dll)$',
+" \ 'link': 'some_bad_symbolic_links',
+" \ }
+
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:15,results:30'
 
 nmap <C-[> <C-^>
+
+
 
 "/
 "/ NERDTree
 "/
+
 let NERDTreeHijackNetrw = 0
+
+
+
+"/
+"/ Greplace.vim
+"/
+set grepprg=ag											"We want to use Ag for the search.
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
+
+
 
 
 
@@ -129,7 +153,6 @@ nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
-
 
 
 

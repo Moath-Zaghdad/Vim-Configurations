@@ -52,7 +52,7 @@ To **Delete the Texts**
         *da(*   => stand for Delete Inside the prentheceas and the prentheceas it selves
         *di{*
     **If You wont to Change what's in the { .. }**
-        *ci{*
+        *CI{*
 
 To **Go To The Class Or Function folder**
     **`Ctr+]`**
@@ -100,7 +100,8 @@ You can do something like
 To ***Soars The File***
 *:*s`o %`**  % => means the current file
 
-
+To ***Delete all the buffers***
+:bufdo bd!
 
 ### TABS
 
@@ -128,7 +129,14 @@ To ***Soars The File***
      +  to go Left  `Ctrl + W + h`
      +  to rotate  `Ctrl + W + W`
 
- * To **go back to the olde file** on the tabe
+ *  To **twak the window size**
+     +  `Ctrl + W` + `|` Maximize the current window Horizontally
+     +  `Ctrl + W` + `__` Maximize the current window Vertically
+     +  `Ctrl + W` + `o` Maximize the current window Horizontally AND Vertically
+     +	`Ctrl + W` + `=` Make all the windows equals
+ 
+
+* To **go back to the olde file** on the tabe
      **`:bp`**
 
     *   to less al the opend file on the buffer
@@ -150,9 +158,20 @@ to les everything on the current directory
     **`:e .`**
 
 
+***
+|  vim | command  description                                    |
+| :--- | ------------------------------------------------------- |
+|  0   | move to beginning of the current line                   |
+|  $   | move to end of line                                     |
+|  H   | move to the top of the current window (high)            |
+|  M   | move to the middle of the current window (middle)       |
+|  L   | move to the bottom line of the current window (low)     |
+|  1G  | move to the first line of the file                      |
+|  20G | move to the 20th line of the file                       |
+|  G   | move to the last line of the file                       |
+|  gg  | move to the first line if the file                      |
 
-*******************************************************************************************
-*******************************************************************************************
+***
 
 #                               From the mains screen
 
@@ -182,19 +201,30 @@ colorscheme delek
 set backspace=indent,eol,start
 
 
-****
-****
+***
+***
 # plugins
+```
+graph TD;
+    atom-dark;
+    
+    Vundle;
+    Vundle-->vinegar;
+    Vundle-->nerdtree;
+    Vundle-->ctrlp;
+    
+    The_Silver_Searcher-->ag.vim
+```
+### [vim-atom-dark](https://github.com/gosukiwi/vim-atom-dark)
 
-[vim-atom-dark](https://github.com/gosukiwi/vim-atom-dark)
 
 
-This is like a backage manigare ...
-[Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+### [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+ This is a Vim plugin manager
  *  Read the [quick-start](https://github.com/VundleVim/Vundle.vim#quick-start) to find out more about this
 
 
-[vinegar.vim](https://github.com/tpope/vim-vinegar)
+### [vinegar.vim](https://github.com/tpope/vim-vinegar)
 After This plug in have been installed you can do this
 **`:e .`**
 
@@ -211,21 +241,22 @@ After This plug in have been installed you can do this
    **`%`** 
 
  
-[nerdtree](https://github.com/scrooloose/nerdtree)
+### [nerdtree](https://github.com/scrooloose/nerdtree)
 :NERDTreeToggle
 
-[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
+### [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
 if you can't get :CtrlPBufTag to work install **`sudo apt install ctags`**
 
 run on the terminal **`ctags -R`** and this makes the tage file, so you could go to vim and do this
 **OR** you can run it on vim **`:!ctags -R`**
 
-**`:tag report`** I mad a short cut `,f`
-**`:tn`** to go to the next *report* function
-**`:tp`** to go to the previous *report* function
-**`:ts`** to select from all the *report* functions available
 
+Ex if you wanna search for the *report* 
+- **`:tag report`** I mad a short cut `,f`
+- **`:tn`** to go to the next *report* function, a short cut is `tn`
+- **`:tp`** to go to the previous *report* function, a short cut is `tp`
+- **`:ts`** to select from all the *report* functions available, a short cut is `ts`
 
 
 
@@ -241,6 +272,24 @@ run on the terminal **`ctags -R`** and this makes the tage file, so you could go
 
 
 
+### [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+A code searching tool similar to *ack*, with a focus on speed.
+[Installation](https://github.com/ggreer/the_silver_searcher#linux)
+
+#### [ag.vim](https://github.com/rking/ag.vim)
+This plugin will allow you to run ag from vim.
+`:Ag 'class User'`
 
 
- 11
+#### [greplace.vim](https://github.com/skwp/greplace.vim)
+This Plugin for doing a search and replace across many files.
+[Customization](https://github.com/skwp/greplace.vim#customization)
+
+**`:Gsearch`**
+and now, if you wanna search and replace after the search result appear
+- go to the visual mod and select what you wanna replace 
+- press **`:`**
+- write **`s/{THE_WORD_TO_REPLACE}/{THE_REPLACED_WORD}`**
+- run **`Greplace`**
+- now either press **`a`** to apply all and  **`:wa`** to write all files, **OR** go to each file by followi:wng the instructions
+
