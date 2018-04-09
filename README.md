@@ -22,7 +22,8 @@ K  Up
 j  Downlasf
 
 u undo
-o craete new line 
+o craete new line
+r replace character
 ```
 
 To **Search for a worde**
@@ -61,12 +62,16 @@ To **Go To The Class Or Function folder**
 
 ### Visual Mod
 
-***v*** to select characters
-***V*** to select by **Lines**
-***vi{*** to select what's inside the the { .. }
-```
-D  Delete
-```
+|  vim | command  description                                       |
+| :--- | ---------------------------------------------------------- |
+|  v   | to select characters                                       |
+|  V   | to select by **Lines**                                     |
+|  vi{ | to select what's inside the the { .. }                     |
+|  D   | to delete the selected                                     |
+| "+y  | to copy the selected text from vim to an external program  |
+| "+p  | to paste a text from an external program to vim            |
+
+
 
 ### Insert Mod      ***I***
 
@@ -136,8 +141,10 @@ To ***Delete all the buffers***
      +	`Ctrl + W` + `=` Make all the windows equals
  
 
-* To **go back to the olde file** on the tabe
+* To **go back to the olde file/windows/buffer** on the tabe
      **`:bp`**
+        or
+     **`Ctrl + 6`** to go the the last file
 
     *   to less al the opend file on the buffer
         **`:ls`**
@@ -158,20 +165,6 @@ to les everything on the current directory
     **`:e .`**
 
 
-***
-|  vim | command  description                                    |
-| :--- | ------------------------------------------------------- |
-|  0   | move to beginning of the current line                   |
-|  $   | move to end of line                                     |
-|  H   | move to the top of the current window (high)            |
-|  M   | move to the middle of the current window (middle)       |
-|  L   | move to the bottom line of the current window (low)     |
-|  1G  | move to the first line of the file                      |
-|  20G | move to the 20th line of the file                       |
-|  G   | move to the last line of the file                       |
-|  gg  | move to the first line if the file                      |
-
-***
 
 #                               From the mains screen
 
@@ -202,18 +195,41 @@ set backspace=indent,eol,start
 
 
 ***
+|  vim | command  description                                    |
+| :--- | ------------------------------------------------------- |
+|  0   | move to beginning of the current line                   |
+|  $   | move to end of line                                     |
+|  H   | move to the top of the current window (high)            |
+|  M   | move to the middle of the current window (middle)       |
+|  L   | move to the bottom line of the current window (low)     |
+|  1G  | move to the first line of the file                      |
+|  20G | move to the 20th line of the file                       |
+|  G   | move to the last line of the file                       |
+|  gg  | move to the first line if the file                      |
+|:!rm %| delete the file we are in right now                     |
+|      |                                                         |
+
 ***
+
 # plugins
 ```
 graph TD;
-    atom-dark;
+    A[Atom Dark];
     
-    Vundle;
-    Vundle-->vinegar;
-    Vundle-->nerdtree;
-    Vundle-->ctrlp;
+    V[Vundle];
+    V --> vinegar;
+    V --> nerdtree;
+    V --> ctrlp;
     
-    The_Silver_Searcher-->ag.vim
+    x[The Silver Searcher]-->ag.vim
+
+
+    S[Vim Snipmate];
+    vim-addon-mw-utils        --> S;
+    tlib_vim                  --> S;
+    vim-snipmate              --> S;
+    vim-snippets(Round edge)  --> |Optional| S;
+    
 ```
 ### [vim-atom-dark](https://github.com/gosukiwi/vim-atom-dark)
 
@@ -243,6 +259,21 @@ After This plug in have been installed you can do this
  
 ### [nerdtree](https://github.com/scrooloose/nerdtree)
 :NERDTreeToggle
+**`, + 1`**
+to create/move/copy  file/folder via nerdtree
+**`m`**
+
+**`t`** to open in new tab
+**`t`** to open in new tab
+
+| NerdTree | command  description                                     |
+| :------- | -------------------------------------------------------- |
+|  , + 1   |   to open the NerdTree                                   |
+|    q     |   to Close NerdTree                                      |
+|    m     |   to create/move/copy file/folder                        |
+|    t     |   open the file in new tab                               |
+|    s     |   open the file in virtucal split                        |
+|    p     |   to go to the upper folder                              |
 
 ### [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
@@ -250,6 +281,20 @@ if you can't get :CtrlPBufTag to work install **`sudo apt install ctags`**
 
 run on the terminal **`ctags -R`** and this makes the tage file, so you could go to vim and do this
 **OR** you can run it on vim **`:!ctags -R`**
+
+| ctrlp       | command  description                                     |
+| :---------- | -------------------------------------------------------- |
+|  Ctrl + P   |                                                          |
+|     F5      |  refresh the cashed files                                |
+|  Ctrl + D   |                                                          |
+|  Ctrl + S   |                                                          |
+|  Ctrl + E   |                                                          |
+***
+|  Ctrl + F   |                                                          |
+|  Ctrl + R   |                                                          |
+|             |                                                          |
+
+
 
 
 Ex if you wanna search for the *report* 
@@ -261,14 +306,7 @@ Ex if you wanna search for the *report*
 
 
 
-**`Ctrl + P`**
-    **`Ctrl + D`**
-    **`Ctrl + R`**
-    **`Ctrl + E`**
-    **`Ctrl + F`**
-**`Ctrl + E`**
-**`Ctrl + R`**
-**`, + 1`**
+
 
 
 
@@ -293,3 +331,40 @@ and now, if you wanna search and replace after the search result appear
 - run **`Greplace`**
 - now either press **`a`** to apply all and  **`:wa`** to write all files, **OR** go to each file by followi:wng the instructions
 
+
+
+
+
+
+## [vim-snipmate](https://github.com/garbas/vim-snipmate)
+create **snippets** folder in your .vim directory
+add your snippets hear for example if you wanna make a snippets for php:
++ create a file and name it **php.snippets**
++ add your snippets in that file !! example:
+```
+ snippet met
+        public function ${1}()
+        {
+            ${2}
+        }
+```
+- note
+    -   to show all the snippets in the file hit
+    **`zx`**
+    -   to close all the snippets in the file hit
+    **`zc`**
+    - to taggle **`za`**
+
+
+- [x] 11
+- [x] 12
+- [x] 13
+- [x] 14
+- [ ] 15
+- [ ] 16
+- [ ] 17
+- [ ] 18
+- [ ] 19
+- [ ] 20
+- [ ] 21
+- [ ] 22
