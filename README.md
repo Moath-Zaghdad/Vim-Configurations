@@ -1,3 +1,6 @@
+
+[![GNU GPL V2.0 License](https://img.shields.io/badge/license-GNU%20GPL%20V2.0-red.svg)](LICENSE)
+
 # Setup guide
 If you wish to use my vim configuration you need to do the following
 before you start, you might need to backup your default configuration in case anything goes wrong
