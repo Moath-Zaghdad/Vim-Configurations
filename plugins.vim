@@ -25,6 +25,9 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'				"	 Optional:
 
 
+Plugin 'tpope/vim-surround'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
