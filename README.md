@@ -8,6 +8,7 @@ before you start, you might need to backup your default configuration in case an
     `mv Vim-Configurations/ .vim`
  + move the .vimrc to your **$HOME** directory or link it
     `ln -s  Vim-Configurations/vimrc ~/.vimrc`
+    `ln -s  Vim-Configurations/gvimrc ~/.gvimrc`
  + go to **~/.vim/bundle/**
     `git clone https://github.com/VundleVim/Vundle.vim.git`
  + step 3 install the plugins
@@ -112,13 +113,14 @@ To ***Delete all the buffers***
 :bufdo bd!
 
 ### TABS
-
  *  To **Open New Tab**
-    **`:tabedit filename*.py`**
+    **`:tabedit {file}`**
  *  To **close all the tabs** on the buffer
     **`:bd`**
  *  To **class the current tab**
     **`:tabclose`** or **`:tabc`**
+ *  To **edit a new file, or jump to the window containing it if it already exists**
+    **`:drop`** or **`:tab drop {file}`** to open the file in a new tab if it isn't already open
 
 
 
@@ -145,7 +147,7 @@ To ***Delete all the buffers***
  
 
 * To **go back to the olde file/windows/buffer** on the tabe
-     **`:bp`**
+     **`:bp`** buffer previous
         or
      **`Ctrl + 6`** to go the the last file
 
@@ -296,7 +298,12 @@ run on the terminal **`ctags -R`** and this makes the tage file, so you could go
 |  Ctrl + F   |                                                          |
 |  Ctrl + R   |                                                          |
 |             |                                                          |
-
+on search
+C-T         open in new Tab
+C+Y and C-V open the location in virtical mod
+C+O         To selecte the open way
+C+S         open Horizantaly
+C+D         to swich the search betwean path and file
 
 
 
@@ -356,13 +363,9 @@ add your snippets hear for example if you wanna make a snippets for php:
     **`zx`**
     -   to close all the snippets in the file hit
     **`zc`**
-    - to taggle **`za`**
+    - to toggle **`za`**
 
 
-- [x] 11
-- [x] 12
-- [x] 13
-- [x] 14
 - [ ] 15
 - [ ] 16
 - [ ] 17

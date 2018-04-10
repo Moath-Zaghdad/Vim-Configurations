@@ -15,27 +15,18 @@ set nonumber 		"Let's deactivate line numbers.
 
 set linespace=10
 
-set tabstop=4							"Redefine tab as 4 spaces
-
-
-
-
-
-
+"set tabstop=4       " The width of a TAB is set to 4.
 
 
 
 "---------------------- Visuals ----------------------"
 
 
-colorscheme laravel
-"colorscheme atom-dark-256
+colorscheme atom-dark-256
 "colorscheme atom-dark
-
-"set guifont=Gargi:h17
 "set t_Co=256
 
-"set macligatures			"We want pretty symbles, when available.
+
 set guioptions-=e			"We don't want Gui tab.
 
 " to remove the side par from the gui vim
@@ -44,12 +35,11 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-
-hi LineNr guibg=bg
 set foldcolumn=2
-hi foldcolumn guibg=bg ctermbg=none
+highlight FoldColumn ctermbg=NONE
+highlight LineNr ctermbg=NONE
 "		remove the color of the Vertical split
-hi VertSplit guibg=bg guifg=bg
+highlight VertSplit ctermbg=NONE ctermfg=NONE
 
 
 
@@ -62,7 +52,8 @@ hi VertSplit guibg=bg guifg=bg
 "---------------------- Mappings ----------------------"
 " imap is a map for insert mod
 " nmap is a map for normal mod
-
+nmap <Leader>Q	:bufdo bd<cr>
+nmap <Leader>q	:bd<cr>
 " ****************************************************** 
 " :echo $MYVIMRC
 
@@ -114,7 +105,8 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:15,results:30'
 "it's like Ctrl+P on sublime
 nmap <C-S> :CtrlPBufTag<cr>
 nmap <C-E> :CtrlPMRUFiles<cr>
-nmap <C-[> <C-^>
+nmap <C-S-[> <C-^>
+nmap <C-S-]> <C-]>
 
 
 
@@ -144,13 +136,15 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 "--------------------- Laravel-Specific  --------------------"
 "nmap  <Leader><Leader>r	:e routes/web.php<cr>
 "nmap  <Leader><Leader>c	:CtrlP app/Http/Controllers<cr>
-nmap  <Leader>lr	:e routes/web.php<cr>
+nmap  <Leader>lrw	:tab drop routes/web.php<cr>
 
 "Show all the Controllers
 nmap  <Leader>lc	:CtrlP app/Http/Controllers<cr>
+"nmap  <Leader>la	:CtrlP app/<cr>
+nmap  <Leader>la	:tab drop app/<cr>:e app/
 
 "Blade templates
-nmap  <Leader>lb	:CtrlP resources/views<cr>
+nmap  <Leader>lv	:CtrlP resources/views<cr>
 
 nmap  <Leader>lm	:!php artisan make:
 
