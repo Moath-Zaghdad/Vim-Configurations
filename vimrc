@@ -22,8 +22,8 @@ set linespace=10
 "---------------------- Visuals ----------------------"
 
 
-colorscheme atom-dark-256
-"colorscheme atom-dark
+"colorscheme atom-dark-256
+colorscheme atom-dark
 "set t_Co=256
 
 
@@ -59,7 +59,7 @@ nmap <Leader>q	:bd<cr>
 
 
 " Make it easy to edi the vimrc file.
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tab drop $MYVIMRC<cr>
 nmap <Leader>es :CtrlP ~/.vim/snippets/<cr>
 
 
@@ -93,9 +93,9 @@ nmap ts :ts<cr>
 "/
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
+"let g:ctrlp_by_filename=1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'node_modules\|\v[\/]\.(git|hg|svn)$', }
+  \ 'dir':  'node_modules\|vendor', }
 " \ 'file': '\v\.(exe|so|dll)$',
 " \ 'link': 'some_bad_symbolic_links',
 " \ }
@@ -107,8 +107,6 @@ nmap <C-S> :CtrlPBufTag<cr>
 nmap <C-E> :CtrlPMRUFiles<cr>
 nmap <C-S-[> <C-^>
 nmap <C-S-]> <C-]>
-
-
 
 "/
 "/ NERDTree
@@ -141,12 +139,25 @@ nmap  <Leader>lrw	:tab drop routes/web.php<cr>
 "Show all the Controllers
 nmap  <Leader>lc	:CtrlP app/Http/Controllers<cr>
 "nmap  <Leader>la	:CtrlP app/<cr>
-nmap  <Leader>la	:tab drop app/<cr>:e app/
+nmap  <Leader>la	:tab<space>drop<space>app/<cr>:e app/
 
 "Blade templates
 nmap  <Leader>lv	:CtrlP resources/views<cr>
 
 nmap  <Leader>lm	:!php artisan make:
+
+"nmap <Leader>lf		:let<space>g:ctrlp_custom_ignore='node_modules'<cr>:CtrlPClearCache<cr>:CtrlP<cr>
+
+nmap  <Leader>lrl	 :!php artisan route:list > .route-list<cr>:tab drop .route-list<cr>
+nmap <Leader>rl		:tab drop .route-list<cr>
+
+"--------------------- Laravel-Vagrant-Specific  --------------------"
+nmap  <Leader>vrl	 :!ssh<space>vagrant@192.168.10.10<space>' cd code/DMCA && php artisan route:list > .route-list '<cr>:tab drop .route-list<cr>
+
+nmap  <Leader>vc	 :!ssh<space>vagrant@192.168.10.10<space>' cd code/DMCA && 
+
+
+
 
 "---------------------- Auto-Commands  ----------------------"
 augroup autosourcing

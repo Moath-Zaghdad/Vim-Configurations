@@ -329,18 +329,18 @@ A code searching tool similar to *ack*, with a focus on speed.
 [Installation](https://github.com/ggreer/the_silver_searcher#linux)
 
 #### [ag.vim](https://github.com/rking/ag.vim)
-This plugin will allow you to run ag from vim.
-`:Ag 'class User'`
+This plugin will allow you to run ag from vim. 
+`:Ag 'class User'`, to search for class User in your project 
 
 
 #### [greplace.vim](https://github.com/skwp/greplace.vim)
 This Plugin for doing a search and replace across many files.
 [Customization](https://github.com/skwp/greplace.vim#customization)
 
-**`:Gsearch`**
+run     **`:Gsearch`**
 and now, if you wanna search and replace after the search result appear
-- go to the visual mod and select what you wanna replace 
-- press **`:`**
+- go to the ***Visual mod*** and select what you wanna replace 
+- Press **`:`**
 - write **`s/{THE_WORD_TO_REPLACE}/{THE_REPLACED_WORD}`**
 - run **`Greplace`**
 - now either press **`a`** to apply all and  **`:wa`** to write all files, **OR** go to each file by followi:wng the instructions
@@ -386,7 +386,6 @@ select a string and ***S*** to create a tag
 *example:*  `"Hellow Surround.vim"`   `cs"<H1>` and it will be  `<h1>Hellow Surround.vim</h1>`
 
 
-- [x] 15
 - [ ] 16
 - [ ] 17
 - [ ] 18
