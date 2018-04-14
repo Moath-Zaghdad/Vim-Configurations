@@ -7,15 +7,19 @@
 
 so ~/.vim/plugins.vim
 syntax enable
-set backspace=indent,eol,start			"Make backspace behave like every other editor."
+set backspace=indent,eol,start			"Make backspace behave like every other editor.	"
 
-let mapleader = ','	"The default leader is \ but a comma is much better.
+let mapleader = ','		"The default leader is \ but a comma is much better.
 "set number 			"Let's activate line numbers.
-set nonumber 		"Let's deactivate line numbers.
+set nonumber 			"Let's deactivate line numbers.
 
 set linespace=10
 
-"set tabstop=4       " The width of a TAB is set to 4.
+"set tabstop=4       		" The width of a TAB is set to 4.
+"set autowriteall		" Automatically write the file when switching buffers.
+
+":set complete=.,w,b,u		" set auto complete settings 
+"     current buffer, any open windows, any loaded buffers, any unloaded buffers
 
 
 
@@ -192,6 +196,23 @@ augroup END
 
 
 
+"----------------- vim-php-namespace
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
+
+vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
 
 
 

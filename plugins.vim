@@ -22,12 +22,21 @@ Plugin 'skwp/greplace.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-"Plugin 'honza/vim-snippets'				"	 Optional:
+"	 	Optional:
+"Plugin 'honza/vim-snippets'
 
 
 Plugin 'tpope/vim-surround'
 
 
+" 			Vim syntax for PHP.
+Plugin 'StanAngeloff/php.vim'
+
+" 		For inserting "use" statements automatically.
+Plugin 'arnaud-lb/vim-php-namespace'
+
+
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

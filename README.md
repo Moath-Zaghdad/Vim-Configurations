@@ -74,6 +74,8 @@ To **Go To The Class Or Function folder**
 |  D   | to delete the selected                                     |
 | "+y  | to copy the selected text from vim to an external program  |
 | "+p  | to paste a text from an external program to vim            |
+| :sort| to sort the selected columns alphabetically                |
+| ,su  | to sort the selected columns from shortest to longests     |
 
 
 
@@ -115,7 +117,7 @@ To ***Delete all the buffers***
 ### TABS
  *  To **Open New Tab**
     **`:tabedit {file}`**
- *  To **close all the tabs** on the buffer
+ *  To **close the buffer that's we are on** 
     **`:bd`**
  *  To **class the current tab**
     **`:tabclose`** or **`:tabc`**
@@ -155,6 +157,8 @@ To ***Delete all the buffers***
         **`:ls`**
         + Now to switch to any buffer from that list
             **`:b3`** *=> :b and the buffer number*
+	+ or to open it in split buffer 
+	    **`:sbuffer 3`**
 
  *  To make the **current split full screne**
      `Ctr + W` `Shift + /`
@@ -386,8 +390,27 @@ select a string and ***S*** to create a tag
 *example:*  `"Hellow Surround.vim"`   `cs"<H1>` and it will be  `<h1>Hellow Surround.vim</h1>`
 
 
-- [ ] 16
-- [ ] 17
+
+
+
+# [php.vim](https://github.com/StanAngeloff/php.vim)
+An up-to-date Vim syntax for PHP.
+
+# [vim-php-namespace](https://github.com/arnaud-lb/vim-php-namespace)
+vim-php-namespace is a vim plugin for inserting "use" statements automatically.
+this plugin requires a *tags* file `ctags -R`
+to use it, set the cursor on the word for example:
+`return User::all();// the cureser is at the world User`
+***,n*** in insert/normal mode well add `use App\User;`
+***,nf*** in insert/normal mode well make it `return App\User::all();`in line
+
+
+
+# [supertab](https://github.com/ervandew/supertab)
+Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs (:help ins-completion).
+
+
+
 - [ ] 18
 - [ ] 19
 - [ ] 20
