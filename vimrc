@@ -23,8 +23,10 @@ set linespace=10
 
 
 "colorscheme atom-dark-256
-colorscheme atom-dark
+"colorscheme atom-dark
 "set t_Co=256
+colorscheme rdark-terminal2
+
 
 
 set guioptions-=e			"We don't want Gui tab.
@@ -54,6 +56,13 @@ highlight VertSplit ctermbg=NONE ctermfg=NONE
 " nmap is a map for normal mod
 nmap <Leader>Q	:bufdo bd<cr>
 nmap <Leader>q	:bd<cr>
+
+"  Ctrl-L leaves
+imap <C-L> <Esc>
+vmap <C-L> <Esc>
+
+" Create A New File In A New Directory		after doing :e newDir/file.new
+nmap <Leader>nd  :!mkdir<space>-p<space>%:h<cr>
 " ****************************************************** 
 " :echo $MYVIMRC
 
@@ -61,7 +70,6 @@ nmap <Leader>q	:bd<cr>
 " Make it easy to edi the vimrc file.
 nmap <Leader>ev :tab drop $MYVIMRC<cr>
 nmap <Leader>es :CtrlP ~/.vim/snippets/<cr>
-
 
 "map <C>; <Esc>:
 "map <C-A>  <Esc>
@@ -95,7 +103,7 @@ nmap ts :ts<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "let g:ctrlp_by_filename=1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'node_modules\|vendor', }
+  \ 'dir':  'node_modules\', }
 " \ 'file': '\v\.(exe|so|dll)$',
 " \ 'link': 'some_bad_symbolic_links',
 " \ }
@@ -103,7 +111,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:15,results:30'
 
 "it's like Ctrl+P on sublime
-nmap <C-S> :CtrlPBufTag<cr>
+nmap <Leader>cpbt :CtrlPBufTag<cr>
 nmap <C-E> :CtrlPMRUFiles<cr>
 nmap <C-S-[> <C-^>
 nmap <C-S-]> <C-]>
@@ -141,12 +149,7 @@ nmap  <Leader>lc	:CtrlP app/Http/Controllers<cr>
 "nmap  <Leader>la	:CtrlP app/<cr>
 nmap  <Leader>la	:tab<space>drop<space>app/<cr>:e app/
 
-"Blade templates
-nmap  <Leader>lv	:CtrlP resources/views<cr>
-
 nmap  <Leader>lm	:!php artisan make:
-
-"nmap <Leader>lf		:let<space>g:ctrlp_custom_ignore='node_modules'<cr>:CtrlPClearCache<cr>:CtrlP<cr>
 
 nmap  <Leader>lrl	 :!php artisan route:list > .route-list<cr>:tab drop .route-list<cr>
 nmap <Leader>rl		:tab drop .route-list<cr>
@@ -155,6 +158,25 @@ nmap <Leader>rl		:tab drop .route-list<cr>
 nmap  <Leader>vrl	 :!ssh<space>vagrant@192.168.10.10<space>' cd code/DMCA && php artisan route:list > .route-list '<cr>:tab drop .route-list<cr>
 
 nmap  <Leader>vc	 :!ssh<space>vagrant@192.168.10.10<space>' cd code/DMCA && 
+
+
+
+"--------------------- Blade-Specific  --------------------"
+"blade settings
+au BufRead,BufNewFile *.blade.php set ft=blade
+au BufRead,BufNewFile *.blade.php set syntax=html
+
+" Snipmate configrations for blade and php
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases.blade = 'blade, html'
+let g:snipMate.scope_aliases.php = 'php'
+
+
+
+
+"Blade templates
+nmap  <Leader>lv	:CtrlP resources/views<cr>
 
 
 
