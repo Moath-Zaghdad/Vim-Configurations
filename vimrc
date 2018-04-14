@@ -14,7 +14,7 @@ let mapleader = ','		"The default leader is \ but a comma is much better.
 set nonumber 			"Let's deactivate line numbers.
 
 set linespace=10
-set tabstop=4       		" The width of a TAB is set to 4.
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab    		" The width of a TAB is set to 4.
 "set autowriteall		" Automatically write the file when switching buffers.
 set complete=.,w,b,u		" set auto complete settings 
 "     current buffer, any open windows, any loaded buffers, any unloaded buffers
