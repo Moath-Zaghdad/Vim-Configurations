@@ -135,13 +135,17 @@ set grepprg=ag											"We want to use Ag for the search.
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
 
+"/
+"/ vim-php-cs-fixer
+"/
+let g:php_cs_fixer_rules = "@PSR2"
+nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
 
 
 
 
 
-
-"--------------------- Laravel-Specific  --------------------"
+"---------------------Greplace.viGreplace.vimm Laravel-Specific  --------------------"
 "nmap  <Leader><Leader>r	:e routes/web.php<cr>
 "nmap  <Leader><Leader>c	:CtrlP app/Http/Controllers<cr>
 nmap  <Leader>lrw	:tab drop routes/web.php<cr>

@@ -410,8 +410,16 @@ to use it, set the cursor on the word for example:
 Supertab is a vim plugin which allows you to use <Tab> for all your insert completion needs (:help ins-completion).
 
 
+# [vim-php-cs-fixer](https://github.com/stephpy/vim-php-cs-fixer)
+This plugin will execute the php-cs-fixer command on the directory or file (depends on which command you call). See options to know how to customize that.
 
-- [ ] 18
+***,pf*** to auto format the file to psr2 
+
+
+## [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+`composer global require friendsofphp/php-cs-fixer`
+
+
 - [ ] 19
 - [ ] 20
 - [ ] 21
