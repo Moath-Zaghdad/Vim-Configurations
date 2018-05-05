@@ -37,19 +37,24 @@ To **Search for a worde**
 To **hed to the Start of the file**
     **gg**
 
-To **Copy a Text**
-    *y*
-    If you want to coppy A **FULL LINE**
-    *yy*
+To **Copy/Yank a Text**
 
+|  vim | command  description                                       |
+| :--- | ---------------------------------------------------------- |
+|  y   |  to copy what's selected                         	    |
+|  yy  |  to copy A **FULL LINE**                                   |
+|  yiw |  to copy the word that the cursor pointing at              |
+
+
+|
 To **Paste the Text**
     *p*
 
 To make the current line to the **sinter of the screen**
     *zz*
 
-To **Delete the Texts**
-    **`{  d,c,v  }{  i,a  }{  (,',",{  }`**
+To **Delete/Change/Select/Yank a Text**
+    **`{  d,c,v,y  }{  i,a  }{  (,',",{  }`**
     * to delete a line
         *dd*
     * to delete texts betwen bracets for examble
@@ -57,7 +62,11 @@ To **Delete the Texts**
         *da(*   => stand for Delete Inside the prentheceas and the prentheceas it selves
         *di{*
     **If You wont to Change what's in the { .. }**
-        *CI{*
+        *Ci{*
+    **If You wont to Select what's in the { .. }**
+        *vi{*
+    **If You wont to Yank what's in the { .. }**
+        *yi{*
 
 To **Go To The Class Or Function folder**
     **`Ctr+]`**
@@ -70,13 +79,27 @@ To **Go To The Class Or Function folder**
 | :--- | ---------------------------------------------------------- |
 |  v   | to select characters                                       |
 |  V   | to select by **Lines**                                     |
-|  vi{ | to select what's inside the the { .. }                     |
+|  vi{ | to select what's inside the { .. }                         |
+|  vit | to select what's inside the TAG                            |
 |  D   | to delete the selected                                     |
 | "+y  | to copy the selected text from vim to an external program  |
 | "+p  | to paste a text from an external program to vim            |
 | :sort| to sort the selected columns alphabetically                |
 | ,su  | to sort the selected columns from shortest to longests     |
 
+##### Marking
+you may make marks in your code to go fast back to these lines/marks
+|    Vim   |  command  description                                    |
+| :------- | -------------------------------------------------------- |
+|  :marks  |   to display all the marks                               |
+|  m { ? } |   m followed by any letter to create a mark <br> example ***mx*** where x == ? |
+|   { ? }  |   If you used a lower case KEY that will work in the <br> currnet buffer only, but if you used a Capital Later <br> it will work acrous all the files |
+|  ' { ? } |   to take you back to the line you marked  	      |
+|  ` { ? } |   to take you back to the same curser place in the line you marked  |
+|  d'{ ? } |   to delete until the mark                                          |
+|  v'{ ? } |   to select everything until the mark                               |
+|  c'{ ? } |   to change everything until the mark                               |
+|          |                                                          |
 
 
 ### Insert Mod      ***I***
@@ -305,6 +328,8 @@ run on the terminal **`ctags -R`** and this makes the tage file, so you could go
 ***
 |  Ctrl + F   |                                                          |
 |  Ctrl + R   |                                                          |
+|  Ctrl + O   |  To go back to the previous point of editing             |
+|  Ctrl + I   |  To go forward to the next edit point                    |
 |             |                                                          |
 on search
 C-T         open in new Tab
