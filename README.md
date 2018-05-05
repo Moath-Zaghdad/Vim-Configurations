@@ -409,6 +409,7 @@ Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tag
 ***ds*** stand for **Delete Surround**
 
 ***dst*** stand for **Delete Surround Tag!**
+***dat*** stand for **Delete A Tag!**
 ***cst*** stand for **Change Surround Tag!**
 select a string and ***S*** to create a tag
 
