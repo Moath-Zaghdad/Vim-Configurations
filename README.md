@@ -32,8 +32,10 @@ r replace character
 
 To **Search for a worde**
     */* and then anyting that you are looking four
+    *?* to search about the current line
     and to see the next word that yor looing for hit 
     *n*
+   to paste something par on the search hit ***Ctrl + R + "***
 To **hed to the Start of the file**
     **gg**
 
@@ -196,6 +198,23 @@ To ***Delete all the buffers***
 to les everything on the current directory
     **`:e .`**
 
+### Macros
+a macro is a just a recording
+    that you can replay at any point or you can even save it for future use
+
+to Start recording hit the letter ***q*** and any letter after it as a register
+to Stop recording hit ***q*** again
+
+you can see all the saved records ***:reg***
+to replay it hit ***@*** and then the register
+example:
+
+***qD*** will start the recording, you may write what you want to record. ***D*** well stop the recording
+***"Dp*** to get what's inside the register	where *"D* refers to the register and *p* for paste
+
+you can save it in your *.vimrc* file ex:
+`let @D="Whatever you want to save, and you may use "Dp to spit it hear"`
+and to use it hit *@D*
 
 
 #                               From the mains screen

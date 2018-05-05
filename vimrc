@@ -21,6 +21,13 @@ set complete=.,w,b,u		" set auto complete settings
 
 
 
+"       Macros
+let @a = "yiw/}O$this->pA = $;P?constructOprotected $;P/construct/\", "
+
+
+
+
+
 "---------------------- Visuals ----------------------"
 
 
