@@ -465,7 +465,5 @@ This plugin will execute the php-cs-fixer command on the directory or file (depe
 `composer global require friendsofphp/php-cs-fixer`
 
 
-- [ ] 19
-- [ ] 20
-- [ ] 21
+
 - [ ] 22
