@@ -89,8 +89,9 @@ To **Go To The Class Or Function folder**
 | :sort| to sort the selected columns alphabetically                |
 | ,su  | to sort the selected columns from shortest to longests     |
 
-##### Marking
+### Marking
 you may make marks in your code to go fast back to these lines/marks
+
 |    Vim   |  command  description                                    |
 | :------- | -------------------------------------------------------- |
 |  :marks  |   to display all the marks                               |
