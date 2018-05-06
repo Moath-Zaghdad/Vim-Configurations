@@ -17,7 +17,7 @@ before you start, you might need to backup your default configuration in case an
 
 # Vim
 
-### Normal mod
+### Normal mode
 
 ```
 H  Left
@@ -55,27 +55,27 @@ To **Paste the Text**
 To make the current line to the **sinter of the screen**
     *zz*
 
-To **Delete/Change/Select/Yank a Text**
-    **`{  d,c,v,y  }{  i,a  }{  (,',",{  }`**
-    * to delete a line
-        *dd*
-    * to delete texts betwen bracets for examble
-        *di(*   => stand for Delete Inside the prentheceas
-        *da(*   => stand for Delete Inside the prentheceas and the prentheceas it selves
-        *di{*
-    **If You wont to Change what's in the { .. }**
-        *Ci{*
-    **If You wont to Select what's in the { .. }**
-        *vi{*
-    **If You wont to Yank what's in the { .. }**
-        *yi{*
+To **Delete/Change/Select/Yank a Text**<br>
+    {  **`d`,`c`,`v`,`y`**  } + {  **`i`,`a`**  } + {  **`(`,`'`,`"`,`{`**  }
+    
+  + to delete a line
+        ***dd***
+  + to delete texts betwen bracets for examble
+    + ***di(***   => stand for Delete Inside the parentheses<br>
+    + ***da(***   => stand for Delete inside the parentheses And the parentheses it selves 
+
+  + If You wont to **Change** what's in the { .. }	=> ***ci{*** <br>
+  + If You wont to **Select** what's in the { .. }	=> ***vi{*** <br>
+  + If You wont to **Yank** what's in the { .. }	=> ***yi{*** <br>
 
 To **Go To The Class Or Function folder**
-    **`Ctr+]`**
+  - **`Ctr+]`**<br>
     And To go back
-    **`Ctr+^`** I made a map for `Ctr+[` 
+  - **`Ctr+^`** or the map that I made **`Ctr+[`**
+  
+<hr>
 
-### Visual Mod
+### Visual Mode
 
 |  vim | command  description                                       |
 | :--- | ---------------------------------------------------------- |
@@ -89,6 +89,8 @@ To **Go To The Class Or Function folder**
 | :sort| to sort the selected columns alphabetically                |
 | ,su  | to sort the selected columns from shortest to longests     |
 
+<hr>
+
 ### Marking
 you may make marks in your code to go fast back to these lines/marks
 
@@ -98,26 +100,23 @@ you may make marks in your code to go fast back to these lines/marks
 |  m { ? } |   m followed by any letter to create a mark <br> example ***mx*** where x == ? |
 |   { ? }  |   If you used a lower case KEY that will work in the <br> currnet buffer only, but if you used a Capital Later <br> it will work acrous all the files |
 |  ' { ? } |   to take you back to the line you marked  	      |
-|  ` { ? } |   to take you back to the same curser place in the line you marked  |
+|  \` { ? } |   to take you back to the same curser place in the line you marked  |
 |  d'{ ? } |   to delete until the mark                                          |
 |  v'{ ? } |   to select everything until the mark                               |
 |  c'{ ? } |   to change everything until the mark                               |
-|          |                                                          |
 
+<hr>
 
-### Insert Mod      ***I***
+### Insert Mode
+press **`I`** to switch to insert mode<br>
+to **exit** from insert mode
+  + ***Esc***
+  + ***Shift + Alt + :***
+  + ***Ctrl + :***
 
+<hr>
 
-***Shift + Alt + :***
-***Esc***
-
-
-
-
-
-
-
-####  :
+### Command Mode   ***`:`***
 
 To **Write/Save** the file
 **`:w`**
@@ -140,6 +139,8 @@ To ***Soars The File***
 To ***Delete all the buffers***
 :bufdo bd!
 
+<hr>
+
 ### TABS
  *  To **Open New Tab**
     **`:tabedit {file}`**
@@ -149,8 +150,6 @@ To ***Delete all the buffers***
     **`:tabclose`** or **`:tabc`**
  *  To **edit a new file, or jump to the window containing it if it already exists**
     **`:drop`** or **`:tab drop {file}`** to open the file in a new tab if it isn't already open
-
-
 
 ### Multi Windows -splits-
 
@@ -192,12 +191,14 @@ To ***Delete all the buffers***
  *  To make the **split equal screen size**
      `Ctr + W` `=`
 
-
+<hr>
 
 ### BROWS THE FOLDERS
 
 to les everything on the current directory
     **`:e .`**
+
+<hr>
 
 ### Macros
 a macro is a just a recording
@@ -218,32 +219,8 @@ you can save it in your *.vimrc* file ex:
 and to use it hit *@D*
 
 
-#                               From the mains screen
 
-##  :
-
-
-#                               From the opend file
-
-## the Edit mod
-
-**To switch to insert mod**
-*i*
-
-## Configrations
-
-
-
-#### Configaration 
-:colorscheme delek
-
-***~/.vimrc***
-syntax enable
- 
-
-colorscheme delek
-
-set backspace=indent,eol,start
+<hr>
 
 
 ***
@@ -262,6 +239,8 @@ set backspace=indent,eol,start
 |      |                                                         |
 
 ***
+
+<hr>
 
 # plugins
 ```
@@ -340,24 +319,16 @@ run on the terminal **`ctags -R`** and this makes the tage file, so you could go
 
 | ctrlp       | command  description                                     |
 | :---------- | -------------------------------------------------------- |
-|  Ctrl + P   |                                                          |
+|  Ctrl + p   |  to invoke CtrlP                                         |
 |     F5      |  refresh the cashed files                                |
-|  Ctrl + D   |                                                          |
-|  Ctrl + S   |                                                          |
-|  Ctrl + E   |                                                          |
-***
-|  Ctrl + F   |                                                          |
-|  Ctrl + R   |                                                          |
-|  Ctrl + O   |  To go back to the previous point of editing             |
-|  Ctrl + I   |  To go forward to the next edit point                    |
-|             |                                                          |
-on search
-C-T         open in new Tab
-C+Y and C-V open the location in virtical mod
-C+O         To selecte the open way
-C+S         open Horizantaly
-C+D         to swich the search betwean path and file
-
+|  Ctrl + d   |  to switch to filename only search instead of full path  |
+|  Ctrl + r   |  to switch to regexp mode.                               |
+|  Ctrl + f<br>Ctrl + b   |  to cycle between modes.                   |
+|  Ctrl + r   |  to switch to regexp mode.                               |
+|  Ctrl + o   |  To go back to the previous point of editing             |
+|  Ctrl + i   |  To go forward to the next edit point                    |
+|  Ctrl + j<br>Ctrl + k |  or the arrow keys to navigate the result list.  |
+|  Ctrl + t<br>Ctrl + v <br> Ctrl + x | open the selected entry in a new tab or in a new split. |
 
 
 Ex if you wanna search for the *report* 
@@ -388,7 +359,7 @@ This Plugin for doing a search and replace across many files.
 
 run     **`:Gsearch`**
 and now, if you wanna search and replace after the search result appear
-- go to the ***Visual mod*** and select what you wanna replace 
+- go to the ***Visual mode*** and select what you wanna replace 
 - Press **`:`**
 - write **`s/{THE_WORD_TO_REPLACE}/{THE_REPLACED_WORD}`**
 - run **`Greplace`**
@@ -420,20 +391,20 @@ add your snippets hear for example if you wanna make a snippets for php:
 
 
 ## [UltiSnips](https://github.com/SirVer/ultisnips)
-UltiSnips is the ultimate solution for snippets in Vim.
-to write new snippet go to *`~/.vim/UltiSnips`* and add one
-or open a file ex: index.php and hit *:UltiSnipsEdit* this well open a snippet for that file type 
+UltiSnips is the ultimate solution for snippets in Vim.<br>
+to write new snippet go to *`~/.vim/UltiSnips`* and simply add one!<br>
+or open a file ex: *index.php* and hit *:UltiSnipsEdit* this well open a snippet for that file type 
 
 
 ## [vim-surround](https://github.com/tpope/vim-surround)
 Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.
 
-***cs*** stand for **Change Surround**
-***ds*** stand for **Delete Surround**
+***cs*** stand for **Change Surround**<br>
+***ds*** stand for **Delete Surround**<br>
 
-***dst*** stand for **Delete Surround Tag!**
-***dat*** stand for **Delete A Tag!**
-***cst*** stand for **Change Surround Tag!**
+***dst*** stand for **Delete Surround Tag!**<br>
+***dat*** stand for **Delete A Tag!**<br>
+***cst*** stand for **Change Surround Tag!**<br>
 select a string and ***S*** to create a tag
 
 *example:*  `"Hellow Surround.vim"`   `cs"<H1>` and it will be  `<h1>Hellow Surround.vim</h1>`
@@ -446,11 +417,11 @@ select a string and ***S*** to create a tag
 An up-to-date Vim syntax for PHP.
 
 # [vim-php-namespace](https://github.com/arnaud-lb/vim-php-namespace)
-vim-php-namespace is a vim plugin for inserting "use" statements automatically.
-this plugin requires a *tags* file `ctags -R`
-to use it, set the cursor on the word for example:
-`return User::all();// the cureser is at the world User`
-***,n*** in insert/normal mode well add `use App\User;`
+vim-php-namespace is a vim plugin for inserting "use" statements automatically.<br>
+this plugin requires a *tags* file `ctags -R`<br>
+to use it, set the cursor on the word for example:<br>
+`return User::all();// the cureser is at the world User`<br>
+***,n*** in insert/normal mode well add `use App\User;`<br>
 ***,nf*** in insert/normal mode well make it `return App\User::all();`in line
 
 
@@ -471,10 +442,10 @@ This plugin will execute the php-cs-fixer command on the directory or file (depe
 # [PDV - PHP Documentor for VIM](https://github.com/tobyS/pdv)
 PDV - PHP Documentor for VIM, your tool of choice for generating PHP doc blocks.
 
+running ***,c*** while you're cursor pointing at the method will create a document comment
+
 ## [vmustache](https://github.com/tobyS/vmustache)
 vmustache - Mustache template system for VIMScript
 
 
 
-
-- [ ] 22
