@@ -78,7 +78,7 @@ nmap <Leader>nd  :!mkdir<space>-p<space>%:h<cr>
 
 " Make it easy to edi the vimrc file.
 nmap <Leader>ev :tab drop $MYVIMRC<cr>
-nmap <Leader>es :CtrlP ~/.vim/snippets/<cr>
+"nmap <Leader>es :CtrlP ~/.vim/snippets/<cr>
 
 "map <C>; <Esc>:
 "map <C-A>  <Esc>
@@ -150,6 +150,24 @@ nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
 
 
 
+"/
+"/ pdv
+"/
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
+
+
+"/
+"/ ultisnips
+"/
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
 
 
 "---------------------Greplace.viGreplace.vimm Laravel-Specific  --------------------"
@@ -178,14 +196,6 @@ nmap  <Leader>vc	 :!ssh<space>vagrant@192.168.10.10<space>' cd code/DMCA &&
 "blade settings
 au BufRead,BufNewFile *.blade.php set ft=blade
 au BufRead,BufNewFile *.blade.php set syntax=html
-
-" Snipmate configrations for blade and php
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases.blade = 'blade, html'
-let g:snipMate.scope_aliases.php = 'php'
-
-
 
 
 "Blade templates
@@ -247,4 +257,10 @@ nmap <C-L> <C-W><C-L>
 
 
 
+
+" Snipmate configrations for blade and php
+"let g:snipMate = {}
+"let g:snipMate.scope_aliases = {}
+"let g:snipMate.scope_aliases.blade = 'blade, html'
+"let g:snipMate.scope_aliases.php = 'php'
 

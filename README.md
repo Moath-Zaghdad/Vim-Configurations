@@ -398,7 +398,7 @@ and now, if you wanna search and replace after the search result appear
 
 
 
-## [vim-snipmate](https://github.com/garbas/vim-snipmate)
+## [vim-snipmate](https://github.com/garbas/vim-snipmate) I'm not using it now!
 create **snippets** folder in your .vim directory
 add your snippets hear for example if you wanna make a snippets for php:
 + create a file and name it **php.snippets**
@@ -418,7 +418,10 @@ add your snippets hear for example if you wanna make a snippets for php:
     - to toggle **`za`**
 
 
-
+## [UltiSnips](https://github.com/SirVer/ultisnips)
+UltiSnips is the ultimate solution for snippets in Vim.
+to write new snippet go to *`~/.vim/UltiSnips`* and add one
+or open a file ex: index.php and hit *:UltiSnipsEdit* this well open a snippet for that file type 
 
 
 ## [vim-surround](https://github.com/tpope/vim-surround)
@@ -463,6 +466,13 @@ This plugin will execute the php-cs-fixer command on the directory or file (depe
 
 ## [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
 `composer global require friendsofphp/php-cs-fixer`
+
+# [PDV - PHP Documentor for VIM](https://github.com/tobyS/pdv)
+PDV - PHP Documentor for VIM, your tool of choice for generating PHP doc blocks.
+
+## [vmustache](https://github.com/tobyS/vmustache)
+vmustache - Mustache template system for VIMScript
+
 
 
 

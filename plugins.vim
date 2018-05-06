@@ -1,3 +1,4 @@
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -18,14 +19,6 @@ Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 
 
-"			Vim-Snipmate Requirements
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-"	 	Optional:
-"Plugin 'honza/vim-snippets'
-
-
 Plugin 'tpope/vim-surround'
 
 
@@ -41,6 +34,22 @@ Plugin 'arnaud-lb/vim-php-namespace'
 
 "PSR2 Formatting
 Plugin 'stephpy/vim-php-cs-fixer'
+
+
+Plugin 'tobyS/vmustache'
+Plugin 'SirVer/ultisnips'
+Plugin 'tobyS/pdv'          "   PHP Documentor
+
+
+
+
+
+"			Vim-Snipmate Requirements
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+"	 	Optional:
+"Plugin 'honza/vim-snippets'
 
 
 
