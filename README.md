@@ -5,10 +5,10 @@
 If you wish to use my vim configuration you need to do the following
 before you start, you might need to backup your default configuration in case anything goes wrong
  + clone the repository to your **$HOME** directory
-    `mv Vim-Configurations/ .vim`
+    `mv Vim-Configurations/ ~/.vim`
  + move the .vimrc to your **$HOME** directory or link it
-    `ln -s  Vim-Configurations/vimrc ~/.vimrc`
-    `ln -s  Vim-Configurations/gvimrc ~/.gvimrc`
+    `ln -s  ~/.vim/vimrc ~/.vimrc`
+    `ln -s  ~/.vim/gvimrc ~/.gvimrc`
  + go to **~/.vim/bundle/**
     `git clone https://github.com/VundleVim/Vundle.vim.git`
  + step 3 install the plugins
