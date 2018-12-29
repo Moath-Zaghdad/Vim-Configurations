@@ -1,4 +1,3 @@
-
 [![GNU GPL V2.0 License](https://img.shields.io/badge/license-GNU%20GPL%20V2.0-red.svg)](LICENSE)
 
 # Setup guide
@@ -81,6 +80,7 @@ To **Go To The Class Or Function folder**
 | :--- | ---------------------------------------------------------- |
 |  v   | to select characters                                       |
 |  V   | to select by **Lines**                                     |
+| ctrl-v | to start Visual mode **blockwise**                       |
 |  vi{ | to select what's inside the { .. }                         |
 |  vit | to select what's inside the TAG                            |
 |  D   | to delete the selected                                     |
