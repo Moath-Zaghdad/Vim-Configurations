@@ -88,6 +88,7 @@ To **Go To The Class Or Function folder**
 | "+p  | to paste a text from an external program to vim            |
 | :sort| to sort the selected columns alphabetically                |
 | ,su  | to sort the selected columns from shortest to longests     |
+| Ctrl+Shift++ <br> Ctrl+- | Zoom in on your terminal <br> Zoom out |
 
 <hr>
 
