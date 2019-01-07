@@ -1,4 +1,3 @@
-
 [![GNU GPL V2.0 License](https://img.shields.io/badge/license-GNU%20GPL%20V2.0-red.svg)](LICENSE)
 
 # Setup guide
@@ -91,6 +90,8 @@ To **Go To The Class Or Function folder**
 | "+p  | to paste a text from an external program to vim            |
 | :sort| to sort the selected columns alphabetically                |
 | ,su  | to sort the selected columns from shortest to longests     |
+| Ctrl+Shift++ <br> Ctrl+- | Zoom in on your terminal <br> Zoom out |
+
 
 <hr>
 

@@ -35,6 +35,7 @@ let @a = "yiw/}O$this->pA = $;P?constructOprotected $;P/construct/\", "
 "colorscheme atom-dark-256
 "colorscheme atom-dark
 "set t_Co=256
+"colorscheme yaflandia   "C++ / C colors
 colorscheme rdark-terminal2
 
 
