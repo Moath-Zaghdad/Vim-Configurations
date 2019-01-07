@@ -9,7 +9,7 @@ before you start, you might need to backup your default configuration in case an
     `ln -s  ~/.vim/vimrc ~/.vimrc` <br>
     `ln -s  ~/.vim/gvimrc ~/.gvimrc`
  + Install [Vundle.vim](https://github.com/VundleVim/Vundle.vim) <br>
-    `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle`
+    `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
     + install the plugins <br>
         `:PluginInstall`
  + Install [plug](https://github.com/junegunn/vim-plug) <br>
