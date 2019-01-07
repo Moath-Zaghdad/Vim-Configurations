@@ -3,18 +3,18 @@
 # Setup guide
 If you wish to use my vim configuration you need to do the following
 before you start, you might need to backup your default configuration in case anything goes wrong
- + clone the repository to your **$HOME** directory
+ + Clone the repository to your **$HOME** directory <br>
     `mv Vim-Configurations/ ~/.vim`
- + move the .vimrc to your **$HOME** directory or link it
-    `ln -s  ~/.vim/vimrc ~/.vimrc`
+ + Move the .vimrc to your **$HOME** directory or link it <br>
+    `ln -s  ~/.vim/vimrc ~/.vimrc` <br>
     `ln -s  ~/.vim/gvimrc ~/.gvimrc`
- + Install [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+ + Install [Vundle.vim](https://github.com/VundleVim/Vundle.vim) <br>
     `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle`
-    + install the plugins
+    + install the plugins <br>
         `:PluginInstall`
- + Install [plug](https://github.com/junegunn/vim-plug)
+ + Install [plug](https://github.com/junegunn/vim-plug) <br>
     `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-    + install the plugs
+    + install the plugs <br>
         `:PlugInstall`
 
 # Vim
