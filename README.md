@@ -9,11 +9,14 @@ before you start, you might need to backup your default configuration in case an
  + move the .vimrc to your **$HOME** directory or link it
     `ln -s  ~/.vim/vimrc ~/.vimrc`
     `ln -s  ~/.vim/gvimrc ~/.gvimrc`
- + go to **~/.vim/bundle/**
-    `git clone https://github.com/VundleVim/Vundle.vim.git`
- + step 3 install the plugins
-    `:PluginInstall`
-
+ + Install [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+    `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle`
+    + install the plugins
+        `:PluginInstall`
+ + Install [plug](https://github.com/junegunn/vim-plug)
+    `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+    + install the plugs
+        `:PlugInstall`
 
 # Vim
 

@@ -34,6 +34,10 @@ Plugin 'arnaud-lb/vim-php-namespace'
 
 "PSR2 Formatting
 Plugin 'stephpy/vim-php-cs-fixer'
+" prettier Formatter
+Plugin 'sbdchd/neoformat'
+
+
 
 
 Plugin 'tobyS/vmustache'
@@ -41,6 +45,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tobyS/pdv'          "   PHP Documentor
 
 
+
+
+"Plugin 'Valloric/YouCompleteMe'
 
 
 

@@ -6,6 +6,7 @@
 
 
 so ~/.vim/plugins.vim
+so ~/.vim/plugs.vim
 syntax enable
 set backspace=indent,eol,start			"Make backspace behave like every other editor.	"
 
@@ -148,6 +149,16 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 let g:php_cs_fixer_rules = "@PSR2"
 nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
 
+
+"/
+"/ Prettier, a code formatting
+"/
+nmap <Leader>pr <Plug>(Prettier)
+"Disable auto formatting of files that have "@format" tag
+let g:prettier#autoformat = 0
+" Running before saving async
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+"let g:prettier#exec_cmd_async = 1
 
 
 "/
