@@ -159,7 +159,22 @@ nmap <Leader>pr <Plug>(Prettier)
 let g:prettier#autoformat = 0
 " Running before saving async
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-"let g:prettier#exec_cmd_async = 1
+
+" force prettier to async
+let g:prettier#exec_cmd_async = 1
+
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 4
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true'
+
 
 
 "/
@@ -167,6 +182,7 @@ let g:prettier#autoformat = 0
 "/
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
+
 
 
 "/
