@@ -1,3 +1,5 @@
+# DEPRECATED
+
 [![GNU GPL V2.0 License](https://img.shields.io/badge/license-GNU%20GPL%20V2.0-red.svg)](LICENSE)
 
 # Setup guide
